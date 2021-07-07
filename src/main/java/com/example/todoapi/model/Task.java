@@ -30,6 +30,8 @@ public class Task {
     @Future
     private LocalDateTime dueDate;
 
+    private LocalDateTime dateAdded;
+
     @NotNull
     @Min(0)
     private Integer estimatedTime;
