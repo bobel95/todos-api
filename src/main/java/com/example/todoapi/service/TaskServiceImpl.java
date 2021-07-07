@@ -4,6 +4,7 @@ package com.example.todoapi.service;
 import com.example.todoapi.model.Task;
 import com.example.todoapi.repository.TaskRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -17,16 +18,20 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public List<Task> findAll() {
-        return taskRepository.findAll();
+        return taskRepository.findAll(
+                Sort.by(Sort.Direction.DESC, "dateAdded")
+        );
     }
 
     @Override
     public Task add(Task task) {
+        task.setDateAdded(LocalDateTime.now());
         return taskRepository.save(task);
     }
 
     @Override
     public List<Task> addAll(List<Task> tasks) {
+//        tasks.forEach(t -> t.setDateAdded(LocalDateTime.now()));
         return taskRepository.saveAll(tasks);
     }
 
