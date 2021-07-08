@@ -25,32 +25,32 @@ public class TodoApiApplication {
         return args -> {
             taskService.addAll(List.of(
                     Task.builder()
-                            .name("test1")
-                            .estimatedTime(8)
+                            .name("Clean up the kitchen")
+                            .estimatedTime(3)
                             .taskType(TaskType.HOME)
                             .dateAdded(LocalDateTime.of(2021, 7, 3, 3, 33, 33))
                             .dueDate(LocalDateTime.of(2021, 8, 7, 3, 33, 33))
                             .build(),
                     Task.builder()
-                            .name("test2")
+                            .name("Send feedback")
                             .taskType(TaskType.WORK)
-                            .estimatedTime(8)
+                            .estimatedTime(2)
                             .dateAdded(LocalDateTime.of(2021, 7, 4, 3, 33, 33))
-                            .dueDate(LocalDateTime.of(2021, 8, 7, 4, 33, 33))
+                            .dueDate(LocalDateTime.of(2021, 8, 8, 4, 33, 33))
                             .build(),
                     Task.builder()
-                            .name("Task 3 Task 3 Task 3 Task 3 Task 3 Task 3 ")
-                            .estimatedTime(3)
+                            .name("Go on a walk")
+                            .estimatedTime(1)
                             .taskType(TaskType.HOME)
                             .dateAdded(LocalDateTime.of(2021, 7, 5, 3, 33, 33))
-                            .dueDate(LocalDateTime.of(2021, 7, 10, 3, 33, 33))
+                            .dueDate(LocalDateTime.of(2021, 8, 9, 3, 33, 33))
                             .build(),
                     Task.builder()
-                            .name("Task 4 Task 4 Task 4 Task 4 Task 4 Task 4 ")
-                            .estimatedTime(3)
+                            .name("Water the flowers")
+                            .estimatedTime(1)
                             .taskType(TaskType.HOME)
                             .dateAdded(LocalDateTime.of(2021, 7, 6, 3, 33, 33))
-                            .dueDate(LocalDateTime.of(2021, 7, 8, 3, 33, 33))
+                            .dueDate(LocalDateTime.of(2021, 8, 10, 3, 33, 33))
                             .build()
             ));
         };
